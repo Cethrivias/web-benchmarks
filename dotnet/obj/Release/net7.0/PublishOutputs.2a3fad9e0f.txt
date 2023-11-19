@@ -1,0 +1,7 @@
+/Users/cethris/Projects/benchmarks/web/dotnet/out/dotnet
+/Users/cethris/Projects/benchmarks/web/dotnet/out/appsettings.Development.json
+/Users/cethris/Projects/benchmarks/web/dotnet/out/appsettings.json
+/Users/cethris/Projects/benchmarks/web/dotnet/out/dotnet.dll
+/Users/cethris/Projects/benchmarks/web/dotnet/out/dotnet.deps.json
+/Users/cethris/Projects/benchmarks/web/dotnet/out/dotnet.runtimeconfig.json
+/Users/cethris/Projects/benchmarks/web/dotnet/out/dotnet.pdb

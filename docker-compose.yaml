@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+    dotnet:
+        build: ./dotnet
+        image: dotnet-bench
+        restart: unless-stopped
+        ports:
+          - 5105:80
+        environment:
+          ASPNETCORE_ENVIRONMENT: Production
+        mem_limit: 300m
+        mem_reservation: 100m
+        cpus: 0.5
+    fastify:
+        build: ./fastify
+        image: fastify-bench
+        restart: unless-stopped
+        ports:
+          - 3000:3000
+        environment:
+          NODE_ENV: Production
+        mem_limit: 300m
+        mem_reservation: 100m
+        cpus: 0.5
