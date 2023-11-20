@@ -4,10 +4,10 @@ namespace dotnet_old.Controllers;
 
 [ApiController]
 [Route("/")]
-public class WeatherForecastController : ControllerBase
+public class HelloController : ControllerBase
 {
 
-  public WeatherForecastController()
+  public HelloController()
   {
   }
 
