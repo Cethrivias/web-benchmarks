@@ -34,3 +34,12 @@ services:
         mem_limit: 300m
         mem_reservation: 100m
         cpus: 2
+    gin:
+        build: ./gin
+        image: gin-bench
+        restart: unless-stopped
+        ports:
+          - 3002:8080
+        mem_limit: 300m
+        mem_reservation: 100m
+        cpus: 2
