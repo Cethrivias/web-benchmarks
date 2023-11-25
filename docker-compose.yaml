@@ -51,6 +51,8 @@ services:
         restart: unless-stopped
         ports:
           - 3004:8080
+        environment:
+          GIN_MODE: release
         mem_limit: 300m
         mem_reservation: 100m
         cpus: 0.5
@@ -63,6 +65,15 @@ services:
         environment:
           ROCKET_ADDRESS: 0.0.0.0
           ROCKET_log_level: 'off'
+        mem_limit: 300m
+        mem_reservation: 100m
+        cpus: 0.5
+    go-http:
+        build: ./go-http
+        image: go-http-bench
+        restart: unless-stopped
+        ports:
+          - 3006:8080
         mem_limit: 300m
         mem_reservation: 100m
         cpus: 0.5
