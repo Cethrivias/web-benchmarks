@@ -53,6 +53,7 @@ services:
           - 3004:8080
         environment:
           GIN_MODE: release
+          GOMAXPROCS: 2
         mem_limit: 300m
         mem_reservation: 100m
         cpus: 0.5
@@ -74,6 +75,19 @@ services:
         restart: unless-stopped
         ports:
           - 3006:8080
+        environment:
+          GOMAXPROCS: 2
+        mem_limit: 300m
+        mem_reservation: 100m
+        cpus: 0.5
+    fiber:
+        build: ./fiber
+        image: fiber-bench
+        restart: unless-stopped
+        ports:
+          - 3007:8080
+        environment:
+          GOMAXPROCS: 1
         mem_limit: 300m
         mem_reservation: 100m
         cpus: 0.5
